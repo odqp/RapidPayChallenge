@@ -1,5 +1,7 @@
-﻿using System.Net;
+﻿using System.Data;
+using System.Net;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RapidPay.API.Models;
 using RapidPay.API.Models.Dto;
@@ -27,6 +29,7 @@ namespace RapidPay.API.Controllers
 			_response = new();
 		}
 
+		[Authorize(Roles = "admin")]
 		[HttpPost]
 		[Route("{number}/payment")]
 		[ProducesResponseType(StatusCodes.Status201Created)]

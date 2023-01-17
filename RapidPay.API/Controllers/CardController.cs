@@ -62,6 +62,7 @@ namespace RapidPay.API.Controllers
 			return Ok(_response);
 		}
 
+		[Authorize(Roles = "admin")]
 		[HttpPost]
 		[ProducesResponseType(StatusCodes.Status201Created)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
