@@ -3,7 +3,7 @@ Notes:
 This solution is using EF InMemory database.
 
 
-To improve the Authorization, were added two end points:
+To improve the Authorization accoding extra requirements, were added two end points:
 "UsersAuth/register/"
 "UsersAuth/login/"
 
